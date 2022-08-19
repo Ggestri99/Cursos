@@ -347,6 +347,45 @@ header.transparente nav  a:hover {
     }
  }
 
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+ .flex-colum-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+ }
+ 
 
  /* Parallax */
 
@@ -368,4 +407,50 @@ header.transparente nav  a:hover {
     font-size: 1.5rem;
     color: #a97c50;
     text-align: center;
+ }
+
+ /* Caja navegacion*/
+
+ .caja-nav {
+    width: 20%;
+    margin-bottom: 1em;
+ }
+
+ .caja-nav a {
+    border: 1px solid #a97c50;
+    background-color: white;
+    color: #a97c50;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
+ }
+
+ .caja-nav a:hover {
+    background-color: #a97c50;
+    color: white;
+ }
+
+ /* Formulario contacto */
+
+ input {
+    border: none;
+    border-bottom: 1.5px solid #a97c50;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    width: 100%;
+ }
+
+ input:focus { 
+    outline: none;
+    border-bottom: 1.5px solid #643e18;
+ }
+ 
+ input.usuario {
+    background-image: url('../img/user.svg');
+    background-repeat: none;
+    background-position: 0 7px ;
+    padding-left: 2em;
  }
