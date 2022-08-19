@@ -195,8 +195,177 @@ header.transparente nav  a:hover {
     color: white;
 }
 
+
+/*Boton burger*/
+
+#burger {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+
+#burger .barra {
+    width: 30px;
+    height: 2px;
+    margin: 6px;
+    background-color: #a97c50;
+    transition: 400ms all ease-in-out;
+}
+
+#burger.abierto .barra {
+    background-color: white;
+}
+
+#burger.abierto .barra.superior{
+    transform:  translate(8px) rotateZ(45deg);
+}
+
+#burger.abierto .barra.media {
+    width: 0;
+}
+
+#burger.abierto .barra.inferior {
+    transform: translateY(-8px) rotateZ(-45deg);
+}
+
+@media (max-width: 620px) {
+    #burger {
+        display: block;
+    }
+
+    header {
+        justify-content: flex-end;
+    }
+
+    header nav {
+        display: none;
+    }
+}
+
+/* Menu lateral */
+
+.menu {
+    width: 360px;
+    height: 100vh;
+    background-color: #424242;
+    position:fixed;
+    top: 0;
+    left: -360px;
+    padding-top: 40px;
+    transition: all 700ms ease-in-out;
+}
+
+.menu.abierto {
+    left: 0;
+}
+
+.menu nav {
+    padding: 0.6rem 0;
+    color: rgb(255, 255, 255, 0.75);
+    font-size: 1.1rem;
+    transition: 300ms all ease-in-out;
+}
+
+.menu nav a:hover {
+    color: white;
+}
+
+.menu .copyright {
+    color: rgb(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+
 /* Layout */
 
 .primera {
     margin-top: 100vh;
 }
+
+#pr {
+    display: block;
+    margin-top: -90px;
+    padding-bottom: 90px;
+}
+
+.fila {
+    display: flex;
+    padding: 2rem 1rem;
+}
+
+.col-66 {
+    width: 66.66666%;
+    padding: 0.5rem 1rem;
+}
+
+.col-50 {
+    width: 50%;
+    padding: 0.5rem 1rem;
+}
+
+.col-75 {
+    width: 75%;
+    padding: 0.5rem 1rem;
+}
+
+.col-100 {
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+.col-33 {
+    width: 33.33333%;
+    padding: 0.5rem 1rem;
+}
+
+.col-25 {
+    width: 25%;
+    padding: 0.5rem 1rem;
+}
+
+ @media (max-width: 720px) {
+    .fila {
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+    }
+    .col-25,
+    .col-50,
+    .col-75,
+    .col-100,
+    .col-33,
+    .col-66 {
+        width: 100%;
+    }
+ }
+
+
+ /* Parallax */
+
+ .fila.paralax {
+    background-image: url('../img/property5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 3rem 2rem;
+ }
+
+ .fila.paralax div {
+    background-color: rgb(255, 255, 255, 0.75);
+    padding: 2rem;
+ }
+
+ .fila.paralax div p {
+    font-size: 1.5rem;
+    color: #a97c50;
+    text-align: center;
+ }
