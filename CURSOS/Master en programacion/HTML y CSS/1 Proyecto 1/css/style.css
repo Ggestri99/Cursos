@@ -450,7 +450,14 @@ header.transparente nav  a:hover {
  
  input.usuario {
     background-image: url('../img/user.svg');
-    background-repeat: none;
+    background-repeat: no-repeat;
+    background-position: 0 7px ;
+    padding-left: 2em;
+ }
+
+ input.email {
+    background-image: url('../img/mail-bronce.svg');
+    background-repeat: no-repeat;
     background-position: 0 7px ;
     padding-left: 2em;
  }
