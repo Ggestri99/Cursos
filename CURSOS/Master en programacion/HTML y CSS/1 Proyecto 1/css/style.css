@@ -41,6 +41,10 @@ img {
     max-width: 100%;
 }
 
+p {
+    margin-bottom: 0.8rem;
+}
+
 
 /* Hero */
 
@@ -386,7 +390,39 @@ header.transparente nav  a:hover {
 
  }
  
+ /* Espaciados y margenes */
 
+ .m-t {
+    margin-top: 1rem;
+ }
+
+ .m-b {
+    margin-bottom: 1rem;
+ }
+
+ .m-l {
+    margin-left: 1rem;
+ }
+
+ .m-r {
+    margin-right: 1rem;
+ }
+
+ .m-t-small {
+    margin-top: 0.5rem;
+ }
+
+ .m-b-small {
+    margin-bottom: 0.5rem;
+ }
+
+ .m-l-small {
+    margin-left: 0.5rem;
+ }
+
+ .m-r-small {
+    margin-right: 0.5rem;
+ }
  /* Parallax */
 
  .fila.paralax {
@@ -435,6 +471,26 @@ header.transparente nav  a:hover {
 
  /* Formulario contacto */
 
+ form.contacto {
+    width: 50%;
+ }
+
+@media (max-width: 720px) {
+    form.contacto {
+        width: 75%;
+     }
+}
+
+@media (max-width: 440px) {
+    form.contacto {
+        width: 100%;
+     }
+}
+
+ form.contacto .fila {
+    padding: 0.8rem;
+ }
+
  input {
     border: none;
     border-bottom: 1.5px solid #a97c50;
@@ -460,4 +516,76 @@ header.transparente nav  a:hover {
     background-repeat: no-repeat;
     background-position: 0 7px ;
     padding-left: 2em;
+ }
+
+
+ button {
+    border: none;
+    background-color: #a97c50;
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
+ }
+
+ .caja-nav a:hover {
+    background-color: #81501e;
+ }
+
+ input[type="checkbox"] {
+    display: none;
+ }
+
+ input[type="checkbox"] + label::before {
+    content: url("../img/square.svg");
+    position: relative;
+    top: 5px;
+    padding-right: 5px;
+ }
+
+ input[type="checkbox"]:checked + label::before {
+    content: url("../img/check-square.svg");
+    position: relative;
+    top: 5px;
+    padding-right: 5px;
+ }
+
+
+ /* Footer */
+
+ footer {
+    background-color: #424242;  
+ }
+
+ footer p {
+    color: rgb(255, 255, 255, 0.8);
+ }
+
+ 
+ footer p:first-child {
+    color: #a97c50;
+    font-weight: bold;
+ }
+
+ footer img.rrss {
+    height: 48px;
+ }
+
+ footer a {
+    font-size: 0.8rem;
+    color: #a97c50;
+ }
+
+ footer a:hover {
+    color: #704a24;
+    transition: 400ms  ease-in-out all;
+ }
+
+ footer .copyrigths {
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    text-align: center;
  }
