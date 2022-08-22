@@ -435,6 +435,27 @@ header.transparente nav  a:hover {
 
  /* Formulario contacto */
 
+ form.contacto {
+    width: 50%;
+ }
+
+ @media (max-width:720px) {
+    form.contacto {
+        width: 75%;
+     }
+ }
+
+ @media (max-width:440px) {
+    form.contacto {
+        width: 100%;
+     }
+ }
+
+
+ form.contacto .fila{
+    padding: 0.8rem;
+ }
+
  input {
     border: none;
     border-bottom: 1.5px solid #a97c50;
@@ -450,7 +471,48 @@ header.transparente nav  a:hover {
  
  input.usuario {
     background-image: url('../img/user.svg');
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-position: 0 7px ;
     padding-left: 2em;
+ }
+
+ input.email {
+    background-image: url('../img/mail-bronce.svg');
+    background-repeat: no-repeat;
+    background-position: 0 7px ;
+    padding-left: 2em;
+ }
+
+ button {
+    border: none;
+    background-color: #a97c50;
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
+ }
+
+ button:hover {
+    background-color: #81501a;
+ }
+
+ input[type="checkbox"] {
+    display: none;
+ }
+
+ input[type="checkbox"] + label::before {
+    content:  url(../img/square.svg);
+    position: relative;
+    top: 5px;
+    padding-right: 5px;
+ }
+
+ input[type="checkbox"]:checked + label::before {
+    content:  url(../img/check-square.svg);
+    position: relative;
+    top: 5px;
+    padding-right: 5px;
  }
